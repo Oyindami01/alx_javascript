@@ -4,7 +4,7 @@ const myObject = {
   };
   
   
-  let value = 89;
+  myObject.value = 89;
   
   
-  console.log(value);
+  console.log(myObject.value);
