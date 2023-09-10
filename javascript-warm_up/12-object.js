@@ -1,7 +1,8 @@
-let myNumber = 12;
+const myObject = {
+    type: 'object',
+    value: 12
+  };
 
+  value = 89
 
-myNumber = 89;
-
-
-console.log(myNumber);
+  console.log(value)
