@@ -4,5 +4,5 @@ const _my_Var =   "JavaScript is amazing"
 
 for (let i = 0; i < lines.length; i++)
  {
-  console.log(lines[i]);
+  console.log("my_Var", "myVar", "_my_Var") 
 }
