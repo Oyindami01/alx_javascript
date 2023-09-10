@@ -1,6 +1,4 @@
-function add(x,y){
-    console.log(x + y)
+const adds = function(a, b){
+    return (a+ b)
 }
-
- (add(3,4))
 
