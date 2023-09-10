@@ -1,9 +1,11 @@
-const callMeMoby = function (x, theFunction) {
+function executeXTimes(x, theFunction) {
   for (let i = 0; i < x; i++) {
     theFunction();
   }
 }
 
-console.log(callMeMoby(3, function(){
-  console.log('c is fun')
-}))
+function myFunction() {
+  console.log("Where I am!");
+}
+
+executeXTimes(5, myFunction);
