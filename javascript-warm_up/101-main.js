@@ -9,5 +9,3 @@ function executeXTimes() {
 }
 
 callMeMoby(5, executeXTimes);
-
-
