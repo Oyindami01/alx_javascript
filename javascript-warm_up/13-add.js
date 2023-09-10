@@ -1,6 +1,4 @@
-function add(a, b) {
-    return a + b;
-  }
-  const result = add(5, 3);
-  console.log(result); 
-    
+const { add } = require('./13-add');
+
+const result = add(2, 3);
+console.log(result);
