@@ -1,11 +1,11 @@
-function executeXTimes(x, theFunction) {
+function callMeMoby(x, theFunction) {
   for (let i = 0; i < x; i++) {
     theFunction();
   }
 }
 
-function myFunction() {
+function executeXTimes() {
   console.log("Where I am!");
 }
 
-executeXTimes(5, myFunction);
+callMeMoby(5, executeXTimes);
