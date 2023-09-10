@@ -3,3 +3,10 @@ const callMeMoby = function (x, theFunction) {
       theFunction();
     }
   }
+  
+  function executeXTimes() {
+    console.log("Executing");
+  }
+  
+  callMeMoby(5, executeXTimes);
+  
