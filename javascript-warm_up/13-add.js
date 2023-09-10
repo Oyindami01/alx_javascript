@@ -1,4 +1,3 @@
-const { add } = require('./13-add');
-
-const result = add(2, 3);
-console.log(result);
+function add(x,y){
+    return (x+y)
+}
