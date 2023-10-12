@@ -9,7 +9,9 @@ if (process.argv.length < 3) {
 const apiUrl = process.argv[2];
 const characterId = 18;
 
-function getMovies (url) {
+let moviesWithWedgeAntilles = 0;
+
+function getMovies(url) {
   request.get(url, (error, response, body) => {
     if (error) {
       console.error('Error:', error.message);
@@ -23,14 +25,14 @@ function getMovies (url) {
 
     try {
       const filmData = JSON.parse(body);
-      const moviesWithWedgeAntilles = filmData.results.filter(movie => {
+      moviesWithWedgeAntilles += filmData.results.filter(movie => {
         return movie.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`);
-      });
+      }).length;
 
       if (filmData.next) {
         getMovies(filmData.next);
       } else {
-        console.log(moviesWithWedgeAntilles.length);
+        console.log(moviesWithWedgeAntilles);
       }
     } catch (parseError) {
       console.error('Error parsing API response:', parseError.message);
