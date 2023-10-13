@@ -28,3 +28,23 @@ request.get(apiUrl, (error, response, body) => {
     process.exit(1);
   }
 });
+    try {
+      const filmData = JSON.parse(body);
+      moviesWithWedgeAntilles += filmData.results.filter(movie => {
+        return movie.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`);
+      }).length;
+
+      if (filmData.next) {
+        getMovies(filmData.next);
+      } else {
+        console.log(moviesWithWedgeAntilles);
+      }
+    } catch (parseError) {
+      console.error('Error parsing API response:', parseError.message);
+      process.exit(1);
+    }
+  ;
+
+
+getMovies(apiUrl);
+
