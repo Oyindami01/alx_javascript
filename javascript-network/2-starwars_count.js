@@ -9,7 +9,7 @@ if (process.argv.length < 3) {
 const apiUrl = process.argv[2];
 const characterId = 18;
 
-function getMovies (url) {
+function getMovies(url) {
   request.get(url, (error, response, body) => {
     if (error) {
       console.error('Error:', error.message);
@@ -30,7 +30,7 @@ function getMovies (url) {
       if (filmData.next) {
         getMovies(filmData.next);
       } else {
-        console.log(moviesWithWedgeAntilles.length);
+        console.log('Number of movies with Wedge Antilles:', moviesWithWedgeAntilles.length);
       }
     } catch (parseError) {
       console.error('Error parsing API response:', parseError.message);
